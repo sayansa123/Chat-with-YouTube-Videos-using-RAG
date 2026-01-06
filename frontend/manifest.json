@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Video Chat",
+  "version": "1.0.0",
+  "description": "Chat with YouTube videos using RAG",
+
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "http://localhost:8000/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

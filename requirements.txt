@@ -1,0 +1,10 @@
+langchain-huggingface
+langchain-community
+sentence-transformers
+Youtube-transcript-api
+pypdf
+dotenv
+langchain_chroma 
+
+fastapi
+uvicorn
