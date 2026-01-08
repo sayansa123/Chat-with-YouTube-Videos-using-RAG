@@ -1,22 +1,22 @@
-# YouTube Video Chat (RAG-powered Chrome Extension)
+# ⃢▸ YouTube Video Chat (RAG-powered Chrome Extension)
 
 Chat with any YouTube video using **Retrieval-Augmented Generation (RAG)**.
 This project combines a **FastAPI backend**, **LangChain + ChromaDB**, and a **Chrome Extension** to let you ask questions about a YouTube video and get precise answers from its transcript.
 
 ---
 
-## ✨ Features
+##  Features
 
-* 🔍 Automatically detects the currently opened YouTube video
-* 📜 Fetches video transcript using YouTube Transcript API
-* 🧠 Builds a vector database (ChromaDB) per video
-* 🤖 Uses HuggingFace LLM (Mistral 7B Instruct)
-* 💬 Simple and clean Chrome extension UI
-* ⚡ Fast in-memory cache for loaded videos
+*  Automatically detects the currently opened YouTube video
+*  Fetches video transcript using YouTube Transcript API
+*  Builds a vector database (ChromaDB) per video
+*  Uses HuggingFace LLM (Mistral 7B Instruct)
+*  Simple and clean Chrome extension UI
+*  Fast in-memory cache for loaded videos
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```
 .
@@ -39,7 +39,7 @@ This project combines a **FastAPI backend**, **LangChain + ChromaDB**, and a **C
 
 ---
 
-## 🧠 How It Works (High-Level Flow)
+## How It Works (High-Level Flow)
 
 1. User opens a YouTube video
 2. `background.js` extracts the `video_id`
@@ -57,9 +57,9 @@ This project combines a **FastAPI backend**, **LangChain + ChromaDB**, and a **C
 
 ---
 
-## 🚀 Backend Setup (FastAPI)
+## Backend Setup (FastAPI)
 
-### 1️⃣ Create Virtual Environment (Recommended)
+### Create Virtual Environment (Recommended)
 
 ```bash
 python -m venv venv
@@ -67,13 +67,13 @@ source venv/bin/activate   # Linux / Mac
 # venv\Scripts\activate    # Windows
 ```
 
-### 2️⃣ Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Set HuggingFace API Token
+### Set HuggingFace API Token
 
 Create a `.env` file (recommended):
 
@@ -83,7 +83,7 @@ HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_key
 
 Or set it directly in code (not recommended for production).
 
-### 4️⃣ Run the Backend Server
+### Run the Backend Server
 
 ```bash
 uvicorn backend.main:app --reload
@@ -97,9 +97,9 @@ http://localhost:8000
 
 ---
 
-## 🧪 Backend API Endpoints
+## Backend API Endpoints
 
-### 🔹 Load Video
+### Load Video
 
 ```
 GET /load_video?video_id=VIDEO_ID
@@ -117,7 +117,7 @@ GET /load_video?video_id=VIDEO_ID
 
 ---
 
-### 🔹 Ask Question
+### Ask Question
 
 ```
 GET /ask?video_id=VIDEO_ID&query=YOUR_QUESTION
@@ -131,27 +131,27 @@ GET /ask?video_id=VIDEO_ID&query=YOUR_QUESTION
 
 ---
 
-## 🧩 Chrome Extension Setup
+## Chrome Extension Setup
 
-### 1️⃣ Open Chrome Extensions Page
+### Open Chrome Extensions Page
 
 ```
 chrome://extensions/
 ```
 
-### 2️⃣ Enable Developer Mode
+### Enable Developer Mode
 
 Toggle **Developer mode** (top-right corner)
 
-### 3️⃣ Load Unpacked Extension
+### Load Unpacked Extension
 
 * Click **Load unpacked**
 * Select the `frontend/` folder
 
-### 4️⃣ Open Any YouTube Video
+### Open Any YouTube Video
 
 * Click the extension icon
-* Ask questions about the video 🎉
+* Ask questions about the video
 
 ---
 
@@ -163,7 +163,7 @@ Toggle **Developer mode** (top-right corner)
 
 ---
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 ### Backend
 
@@ -181,7 +181,7 @@ Toggle **Developer mode** (top-right corner)
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 * Transcript-only (no video frames)
 * In-memory cache (lost on server restart)
@@ -190,7 +190,7 @@ Toggle **Developer mode** (top-right corner)
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 * Persistent vector store per video
 * Streaming responses
@@ -201,7 +201,7 @@ Toggle **Developer mode** (top-right corner)
 
 ---
 
-## ˙✧˖°📸⋆｡˚ Snapshots
+## Snapshots
 
 _Examples showing question answering, summary generation, and strict context-based responses._
 
@@ -219,7 +219,7 @@ _Examples showing question answering, summary generation, and strict context-bas
 
 ---
 
-## 🧑‍💻 Author
+## Author
 
 **Shayan Sarkar**
 Computer Science Student
@@ -227,7 +227,7 @@ Passionate about AI
 
 ---
 
-## 📜 License
+## License
 
 This project is for **learning and educational purposes**.
 You are free to modify and extend it.
